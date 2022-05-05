@@ -6,7 +6,9 @@
     <title>Unity WebGL Player | My project</title>
   </head>
   <body style="text-align: center">
-    <canvas id="unity-canvas" width=1920 height=1080 style="width: 1920px; height: 1080px; background: #231F20"></canvas>
+    <div id="unity-container" style="position: absolute; width: 100%; height: 100%">
+      <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} style="width: 100%; height: 100%"></canvas>
+    </div>
     <script src="Build/ER_Path.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
